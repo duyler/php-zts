@@ -3,6 +3,10 @@
 
 https://github.com/docker-library/php/blob/master/8.2/bookworm/fpm/Dockerfile
 
+### Usage
+
+`docker pull duyler/php-fpm-zts`
+
 ### PHP extensions included:
 
 * bcmath
