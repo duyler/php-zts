@@ -55,11 +55,11 @@ ENV PHP_CFLAGS="-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_
 ENV PHP_CPPFLAGS="$PHP_CFLAGS"
 ENV PHP_LDFLAGS="-Wl,-O1 -pie"
 
-ENV GPG_KEYS 39B641343D8C104B2B146DC3F9C39DC0B9698544 E60913E4DF209907D8E30D96659A97C9CF2A795A 1198C0117593497A5EC5C199286AF1F9897469DC
+ENV GPG_KEYS 1198C0117593497A5EC5C199286AF1F9897469DC C28D937575603EB4ABB725861C0779DC5C0A9DE4 AFD8691FDAEDF03BDF6E460563F15A9B715376CA
 
-ENV PHP_VERSION 8.2.12
-ENV PHP_URL="https://www.php.net/distributions/php-8.2.12.tar.xz" PHP_ASC_URL="https://www.php.net/distributions/php-8.2.12.tar.xz.asc"
-ENV PHP_SHA256="e1526e400bce9f9f9f774603cfac6b72b5e8f89fa66971ebc3cc4e5964083132"
+ENV PHP_VERSION 8.3.0
+ENV PHP_URL="https://www.php.net/distributions/php-8.3.0.tar.xz" PHP_ASC_URL="https://www.php.net/distributions/php-8.3.0.tar.xz.asc"
+ENV PHP_SHA256="1db84fec57125aa93638b51bb2b15103e12ac196e2f960f0d124275b2687ea54"
 
 RUN set -eux; \
 	\
@@ -173,14 +173,12 @@ RUN set -eux; \
 		--enable-fpm \
 		--with-fpm-user=www-data \
 		--with-fpm-group=www-data \
-        \
 # https://github.com/docker-library/php/pull/939#issuecomment-730501748
-    	--enable-embed \
-    	\
+		--enable-embed \
+		\
 		--enable-zts \
 # https://externals.io/message/118859
 		--disable-zend-signals \
-		--enable-zend-max-execution-timers \
 	; \
 	make -j "$(nproc)"; \
 	find -type f -name '*.a' -delete; \
