@@ -312,7 +312,6 @@ RUN pecl install pcov
 RUN pecl install msgpack
 RUN pecl install redis
 RUN pecl install memcached
-RUN pecl install xdebug
 RUN pecl install parallel
 
 RUN docker-php-ext-configure pcntl --enable-pcntl
@@ -323,7 +322,6 @@ RUN docker-php-ext-enable pcntl \
     && docker-php-ext-enable msgpack \
     && docker-php-ext-enable redis \
     && docker-php-ext-enable memcached \
-    && docker-php-ext-enable xdebug \
     && docker-php-ext-enable parallel \
     && docker-php-ext-enable sockets
 

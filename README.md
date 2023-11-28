@@ -1,11 +1,11 @@
 # PHP-FPM with ZTS docker build
 ## Based on the official Dockerfile of the PHP docker image, which includes zts for fpm and additional packages.
 
-https://github.com/docker-library/php/blob/master/8.2/bookworm/fpm/Dockerfile
+https://github.com/docker-library/php/blob/master/8.3/bookworm/fpm/Dockerfile
 
 ### PHP version
 #### Build always include only latest PHP version 8.x.
-Current version: `8.2.12`
+Current version: `8.3.0`
 
 ### Usage
 
@@ -59,7 +59,6 @@ Current version: `8.2.12`
 * msgpack
 * redis
 * memcached
-* xdebug
 
 ### Additional packages:
 
