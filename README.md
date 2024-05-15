@@ -5,7 +5,7 @@ https://github.com/docker-library/php/blob/master/8.3/bookworm/fpm/Dockerfile
 
 ### PHP version
 #### Build always include only latest PHP version 8.x.
-Current version: `8.3.3`
+Current version: `8.3.6`
 
 ### Usage
 
